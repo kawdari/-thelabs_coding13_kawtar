@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomePController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NavbarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //HOME
-Route::get('/', [HomePageController::class, 'index']);
+Route::get('/', [HomePController::class, 'index']);
 
 //SERVICE
 Route::get('/services', [ServiceController::class, 'index']);

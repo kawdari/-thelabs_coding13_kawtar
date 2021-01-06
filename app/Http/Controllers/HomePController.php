@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\HomeP;
+use App\Models\Nav;
 use Illuminate\Http\Request;
 
 class HomePController extends Controller
@@ -14,7 +15,7 @@ class HomePController extends Controller
      */
     public function index()
     {
-        $logo = Navbar::all();
+        $logo = Nav::all();
         return view('labs.home', compact('logo'));
     }
 

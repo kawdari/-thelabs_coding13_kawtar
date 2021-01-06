@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NavBar;
+use App\Models\Nav;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class NavBarController extends Controller
+
+class NavController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class NavBarController extends Controller
      */
     public function index()
     {
-        $navbars = Navbar::all();
+        $navbars = Nav::all();
         return view('admin.navbar.navbar-logo', compact('navbars'));
     }
 
@@ -42,10 +44,10 @@ class NavBarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\NavBar  $navBar
+     * @param  \App\Models\Nav  $nav
      * @return \Illuminate\Http\Response
      */
-    public function show(NavBar $navBar)
+    public function show(Nav $nav)
     {
         //
     }
@@ -53,10 +55,10 @@ class NavBarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\NavBar  $navBar
+     * @param  \App\Models\Nav  $nav
      * @return \Illuminate\Http\Response
      */
-    public function edit(NavBar $navBar)
+    public function edit(Nav $nav)
     {
         //
     }
@@ -65,12 +67,12 @@ class NavBarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\NavBar  $navBar
+     * @param  \App\Models\Nav  $nav
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NavBar $navBar)
+    public function update(Request $request, Nav $nav)
     {
-        $updateLogo = new Navbar();
+        $updateLogo = new Nav();
         $updateLogo->logo = $request->file('logo')->hashName();
         $updateLogo->save();
         $request->file('logo')->storePublicly('images', 'public');
@@ -80,10 +82,10 @@ class NavBarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\NavBar  $navBar
+     * @param  \App\Models\Nav  $nav
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NavBar $navBar)
+    public function destroy(Nav $nav)
     {
         //
     }

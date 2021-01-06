@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\NavBar;
+use App\Models\Nav;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class NavBarFactory extends Factory
+class NavFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = NavBar::class;
+    protected $model = Nav::class;
 
     /**
      * Define the model's default state.
