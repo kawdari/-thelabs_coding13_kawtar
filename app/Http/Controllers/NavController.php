@@ -16,8 +16,8 @@ class NavController extends Controller
      */
     public function index()
     {
-        $navbars = Nav::all();
-        return view('admin.navbar.navbar-logo', compact('navbars'));
+        $navbar = Nav::all();
+        return view('admin.navbar.navbar-logo', compact('navbar'));
     }
 
     /**

@@ -241,9 +241,39 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        
+        /////
+        /////
+        ['header' => 'Modification du Site'],
         [
-            'text' => 'profile',
+            'text'       => 'Nav',
+            'icon'       => 'fas fa-bars',
+            'url'        => '/navbar',
+        ],
+        [
+            'text'       => 'Logo',
+            'icon'       => 'fas fa-image',
+            'url'        => '/logo',
+        ],
+        [
+            'text'    => 'Carousel',
+
+            'submenu' => [
+                [
+                    'text'       => 'Image Carousel',
+                    'icon'       => 'fas fa-images',
+                    'url'        => '/carouselimg',
+                ],
+                [
+                    'text'       => 'texte Carousel',
+                    'icon'       => 'fas fa-pen',
+                    'url'        => '/carouselTxt',
+                ],
+            ],
+        ],
+        /* ['header' => 'account_settings'],
+        [
+            'text' => 'abdel',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
@@ -305,6 +335,36 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
+        ], */
+        [
+            'text'       => 'Services',
+            'icon_color' => 'fas fa-cogs',
+            'url'        => '/service',
+        ],
+        [
+            'text'       => '  Presentation',
+            'icon'       => 'fas fa-handshake ',
+            'url'        => '/presentation',
+        ],
+        [
+            'text' => 'Video',
+            'url'  => '/video',
+            'icon' => 'fas fa-video',
+        ],
+        [
+            'text' => 'Ready',
+            'url'  => '/ready',
+            'icon' => 'fas fa-pen',
+        ],
+        [
+            'text'    => 'Team',
+            'icon'    => 'fas fa-users',
+            'url'  => '/team',
+        ],
+        [
+            'text'    => 'Testimonials',
+            'icon'    => 'fas fa-gavel',
+            'url'  => '/testimonials',
         ],
     ],
 
