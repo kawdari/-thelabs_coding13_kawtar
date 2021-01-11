@@ -65,10 +65,11 @@
 		<div class="responsive"><i class="fa fa-bars"></i></div>
 		<nav>
 			<ul class="menu-list">
-				<li class="active"><a href="/">Home</a></li>
-				<li><a href="/services">Services</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li class="active"><a href="/">{{$navbar->nav1}}
+				</a></li>
+				<li><a href="/services">{{$navbar->nav2}}</a></li>
+				<li><a href="/blog">{{$navbar->nav3}}</a></li>
+				<li><a href="/contact">{{$navbar->nav4}}</a></li>
 				<!-- Authentication Links -->
 				@guest
 				@if (Route::has('login'))

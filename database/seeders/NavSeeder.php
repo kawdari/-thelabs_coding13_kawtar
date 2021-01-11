@@ -16,11 +16,11 @@ class NavSeeder extends Seeder
     public function run()
     {
         DB::table('navs')->insert([
-            'logo' => 'img/logo.png',
-            'linkOne1' => 'Home',
-            'linkTwo2' => 'Services',
-            'linkTree3' => 'Blog',
-            'linkFour4' => 'Contact'
+           /*  'logo' => 'img/logo.png', */
+            'nav1' => 'Home',
+            'nav2' => 'Services',
+            'nav3' => 'Blog',
+            'nav4' => 'Contact'
         ]);
     }
 }

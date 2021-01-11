@@ -15,10 +15,11 @@ class HomePController extends Controller
      */
     public function index()
     {
-        $logo = Nav::all();
-        return view('labs.home', compact('logo'));
+        $logo = Nav::all(); 
+        $navbar = Nav::all()[0];
+        return view('labs.home', compact('logo', 'navbar'));
     }
-
+   
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +27,7 @@ class HomePController extends Controller
      */
     public function create()
     {
-        //
+        ////
     }
 
     /**
@@ -37,7 +38,7 @@ class HomePController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ////
     }
 
     /**
@@ -48,7 +49,7 @@ class HomePController extends Controller
      */
     public function show(HomeP $homeP)
     {
-        //
+        ////
     }
 
     /**
@@ -59,7 +60,7 @@ class HomePController extends Controller
      */
     public function edit(HomeP $homeP)
     {
-        //
+        ////
     }
 
     /**
@@ -71,7 +72,7 @@ class HomePController extends Controller
      */
     public function update(Request $request, HomeP $homeP)
     {
-        //
+        ////
     }
 
     /**
@@ -82,6 +83,6 @@ class HomePController extends Controller
      */
     public function destroy(HomeP $homeP)
     {
-        //
+        ////
     }
 }

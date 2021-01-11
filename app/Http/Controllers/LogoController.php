@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nav;
+use App\Models\Logo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic;
 
-
-class NavController extends Controller
+class LogoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,13 @@ class NavController extends Controller
      */
     public function index()
     {
-        $nav = Nav::all();
-        return view('admin.navbar.navbar-links', compact('nav'));
+        $logo=Logo::all();
+      /*   $imgPetit = ImageManagerStatic::make('img/' . $logo->image)->resize(111,32);
+        $imgGrand = ImageManagerStatic::make('img/' . $logo->image)->resize(504,148);
+
+        $imgPetit->save("img/imgPetit.png",100);
+        $imgGrand->save("img/imgGrand.png",100); */
+        return view('admin.logo.logo',compact('logo'));
     }
 
     /**
@@ -44,10 +49,10 @@ class NavController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Nav  $nav
+     * @param  \App\Models\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function show(Nav $nav)
+    public function show(Logo $logo)
     {
         //
     }
@@ -55,40 +60,39 @@ class NavController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Nav  $nav
+     * @param  \App\Models\Logo  $logo
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        $navbar= Nav::find($id);
-        return view('admin.navbar.navbar-edit',compact('navbar'));
+        $logo=Logo::find($id);
+        return view('admin.logo.edit',compact('logo'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Nav  $nav
+     * @param  \App\Models\Logo  $logo
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $updateNav = Nav::find($id);
-        $updateNav->nav1 = $request->nav1;
-        $updateNav->nav2 = $request->nav2;
-        $updateNav->nav3 = $request->nav3;
-        $updateNav->nav4 = $request->nav4;
-        $updateNav->save();
-        return redirect('/navbar');
+        $updateLogo = Logo::find($id);
+        $updateLogo->image = $request->file('image')->hashName();
+        $updateLogo->save();
+        Storage::disk('public')->delete('img/' . $updateLogo->image);
+        $request->file('image')->storePublicly('img', 'public');
+        return redirect('/logo');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Nav  $nav
+     * @param  \App\Models\Logo  $logo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nav $nav)
+    public function destroy(Logo $logo)
     {
         //
     }

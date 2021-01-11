@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNavsTable extends Migration
+class CreateCarousselsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateNavsTable extends Migration
      */
     public function up()
     {
-        Schema::create('navs', function (Blueprint $table) {
+        Schema::create('caroussels', function (Blueprint $table) {
             $table->id();
-            $table->string('nav1');
-            $table->string('nav2');
-            $table->string('nav3');
-            $table->string('nav4');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateNavsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('navs');
+        Schema::dropIfExists('caroussels');
     }
 }

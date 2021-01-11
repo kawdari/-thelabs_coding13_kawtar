@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
 			NavSeeder::class,
 			RoleSeeder::class,
-			UserSeeder::class,
+            UserSeeder::class,
+            TexteCaroussel::class,
+            CarousselSeeder::class,
+            
 		]);    }
 }

@@ -244,10 +244,10 @@ return [
         
         /////
         /////
-        ['header' => 'Modification du Site'],
+        ['header' => 'Website modification'],
         [
-            'text'       => 'Nav',
-            'icon'       => 'fas fa-bars',
+            'text'       => 'Navigation table',
+            'icon'       => 'fas fa-ellipsis-h',
             'url'        => '/navbar',
         ],
         [
@@ -256,18 +256,19 @@ return [
             'url'        => '/logo',
         ],
         [
-            'text'    => 'Carousel',
-
+            'text'    => 'Caroussel (img/texte)',
+            'icon'       => 'arrows-alt-h',
+            
             'submenu' => [
                 [
                     'text'       => 'Image Carousel',
                     'icon'       => 'fas fa-images',
-                    'url'        => '/carouselimg',
+                    'url'        => '/carousselImage',
                 ],
                 [
                     'text'       => 'texte Carousel',
                     'icon'       => 'fas fa-pen',
-                    'url'        => '/carouselTxt',
+                    'url'        => '/carousselTexte',
                 ],
             ],
         ],
@@ -336,14 +337,10 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ], */
+      
         [
-            'text'       => 'Services',
-            'icon_color' => 'fas fa-cogs',
-            'url'        => '/service',
-        ],
-        [
-            'text'       => '  Presentation',
-            'icon'       => 'fas fa-handshake ',
+            'text'       => 'Presentation',
+            'icon'       => 'fas fa-user-friends',
             'url'        => '/presentation',
         ],
         [

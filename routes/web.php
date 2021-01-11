@@ -6,7 +6,9 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\NavController;
+use App\Http\Controllers\LogoController;
+use App\Http\Controllers\CarousselController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,7 @@ use App\Http\Controllers\NavbarController;
 
 //HOME
 Route::get('/', [HomePController::class, 'index']);
+/* Route::get('/', [HomePController::class, 'index2']); */
 
 //SERVICE
 Route::get('/services', [ServiceController::class, 'index']);
@@ -36,11 +39,26 @@ Route::get('/blog-post', [BlogPostController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
 
 //AdminLte
-Route::get('/navbar-logo', [NavbarController::class, 'index']);
-Route::post('/update-logo', [NavbarController::class, 'update']);
-Route::get('/navbar-links', [NavbarController::class, 'links']);
-
-
+//nav
+Route::get('/navbar', [NavController::class, 'index']);
+Route::get('/edit-navbar/{id}', [NavController::class, 'edit']);
+Route::post('/update-navbar/{id}', [NavController::class, 'update']);
+//logo
+Route::get('/logo', [LogoController::class, 'index']);
+Route::get('/edit-logo/{id}', [LogoController::class, 'edit']);
+Route::post('/update-logo/{id}', [LogoController::class, 'update']);
+//caroussel
+//image
+Route::get('/carousselImage', [CarousselController::class, 'index']);
+Route::get('/create-carousselImage', [CarousselController::class, 'create']);
+Route::post('/addCarousselImage', [CarousselController::class, 'store']);
+Route::get('/edit-carouselimg/{id}', [CarousselController::class, 'edit']);
+Route::post('/update-carousselImage/{id}', [CarousselController::class, 'update']);
+Route::post('/delete-carousseImage/{id}', [CarousselController::class, 'destroy']);
+//texte
+Route::get('/carousselTexte', [CarousselController::class, 'indexText']);
+Route::get('/editCarousselTexte/{id}', [CarousselController::class, 'editTexte']);
+Route::post('/updateCarousselTexte/{id}', [CarousselController::class, 'uupdateTexte']);
 
 //IDK
 
