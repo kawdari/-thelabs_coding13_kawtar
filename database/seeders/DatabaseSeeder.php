@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\TeamTitle;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,6 +20,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TexteCaroussel::class,
             CarousselSeeder::class,
-            
+            PresentationSeeder::class,
+            VideoSeeder::class,
+            TeamTitleSeeder::class,
+            TeamSeeder::class,
+            TestiSeeder::class,
 		]);    }
 }

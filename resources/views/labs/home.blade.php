@@ -93,8 +93,10 @@
 	<div class="hero-section">
 		<div class="hero-content">
 			<div class="hero-center">
-				<img src="img/big-logo.png" alt="">
-				<p>Get your freebie template now!</p>
+				<img  src="{{asset('img/big-logo.png')}}" alt="">
+			{{-- 	@foreach($texteCaroussel  as $text)
+				<p>{{$text->text}}</p>
+				@endforeach --}}
 			</div>
 		</div>
 		<!-- slider -->
@@ -179,7 +181,8 @@
 				<div class="intro-video">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<img src="img/video.jpg" alt="">
+{{-- 								<img src="{{asset('img/'.$video->image)}}" alt="">
+ --}}
 							<a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
 								<i class="fa fa-play"></i>
 							</a>

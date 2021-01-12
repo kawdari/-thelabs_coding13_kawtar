@@ -102,7 +102,7 @@ class CarousselController extends Controller
     public function updateTexte(Request $request, $id)
     {
         $updateTexteCaroussel = TexteCaroussel::find($id);
-        $updateTexteCaroussel->texte = $request->texte;
+        $updateTexteCaroussel->text = $request->text;
         $updateTexteCaroussel->save();
         return redirect('/carousselTexte');
     }

@@ -3,10 +3,10 @@
 @section('title', 'AdminLTE')
 
 @section('content')
-<form action="/updateCarousselTexte/{{$textss->id}}" method="post">
+<form action="/updateTitle/{{$teamTitles->id}}" method="post">
     <div class="container">
         <div>
-        <textarea name="text" id="" cols="30" value="{{$textss->text}}" rows="10">{{$textss->text}}</textarea>
+        <textarea name="title" id="" cols="30" value="{{$teamTitles->title}}" rows="10">{{$teamTitles->title}}</textarea>
         </div>
         @csrf
         <button class="btn btn-success mt-4">Change</button>
