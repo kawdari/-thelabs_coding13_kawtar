@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ContactMain;
 use App\Models\TeamTitle;
 use Illuminate\Database\Seeder;
 
@@ -25,5 +26,8 @@ class DatabaseSeeder extends Seeder
             TeamTitleSeeder::class,
             TeamSeeder::class,
             TestiSeeder::class,
+            ContactSeeder::class,
+            ContactMainSeeder::class,
+            TagSeeder::class,
 		]);    }
 }

@@ -13,6 +13,8 @@ use App\Http\Controllers\PresentationController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestiController;
+use App\Http\Controllers\TagController;
+
 
 
 
@@ -91,6 +93,18 @@ Route::get('/createTestimonial',[TestiController::class,'create']);
 Route::post('/addTestimonial',[TestiController::class,'store']);
 Route::post('/updateTestimonial/{id}', [TestiController::class, 'update']);
 Route::post('/deleteTestimonial/{id}', [TestiController::class, 'destroy']);
+//contact
+Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/editContact/{id}', [ContactController::class, 'edit']);
+Route::get('/editContact2/{id}', [ContactController::class, 'editMain']);
+Route::post('/updateContact/{id}', [ContactController::class, 'update']);
+Route::post('/updateContact2/{id}', [ContactController::class, 'update2']);
+//tag
+Route::get('/tags', [TagController::class, 'index']);
+Route::post('/addTag', [TagController::class, 'store']);
+Route::get('/editTag/{id}', [TagController::class, 'edit']);
+Route::post('/updateTag/{id}', [TagController::class, 'update']);
+Route::post('/deleteTag/{id}', [TagController::class, 'destroy']);
 
 
 

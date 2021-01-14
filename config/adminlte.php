@@ -361,6 +361,43 @@ return [
             'icon'    => 'fas fa-gavel',
             'url'  => '/testimonials',
         ],
+        [
+            'text'    => 'Contact',
+            'icon'    => 'fas fa-address-book',
+            'url'  => '/contact',
+        ],
+        [
+            'text'        => 'Tags',
+            'url'         => '/tags',
+            'icon'        => 'fas fa-hashtag',
+        ],
+        [
+            'text'        => 'Categories',
+            'url'         => '/categories',
+  
+     
+        ],
+        ['text'    => 'Articles',
+        'icon'        => 'fas fa-newspaper',
+        'submenu' => [
+            
+            [
+                'text'        => 'Create Article',
+                'url'         => '/create-article',
+                'icon'        => 'fas fa-arrow-right',
+            ],
+            [
+                'text'       => 'Articles',
+                'url'         => '/articles',
+                'icon'        => 'fas fa-arrow-right',
+            ],
+            [
+                'text'       => 'Articles en Attente',
+                'url'         => '/articlesAttente',
+                'icon'        => 'fas fa-arrow-right',
+            ],
+        ],
+    ],
     ],
 
     /*
